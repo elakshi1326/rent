@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find flats and apartments for rent across India with Rentease.">
+  <title>Rentease — Find a place to call home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Rentease home"><span class="brand-mark">⌂</span><span>rente<span class="brand-accent">ase</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#homes">Find a home</a><a href="#how-it-works">How it works</a><a href="#about">About</a>
+    </nav>
+    <a class="list-property" href="#contact">List your property <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>A place that<br>feels like <em>you.</em></h1>
+        <p class="hero-description">Find a home to rent across India — from your first studio to a little more room to grow.</p>
+        <div class="hero-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>M</span></div><p><strong>Made for home seekers</strong><br><span>Search simply. Move confidently.</span></p></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a cozy apartment building">
+        <div class="sun"></div><div class="building building-back"></div><div class="building building-front">
+          <div class="roof"></div><div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="door"></div><div class="plant plant-one">✦</div>
+        </div>
+        <div class="floating-note"><span class="note-icon">⌂</span><span><strong>Your kind of place</strong><small>Just around the corner</small></span><span class="note-heart">♡</span></div>
+        <div class="art-label">FIND YOUR OWN LITTLE CORNER</div>
+      </div>
+      <div class="search-panel">
+        <div class="search-field location-field"><label for="city">WHERE</label><div class="field-control"><span class="field-icon">⌖</span><select id="city"><option value="">All India</option><option>Delhi</option><option>Mumbai</option><option>Bengaluru</option><option>Pune</option><option>Hyderabad</option><option>Chennai</option><option>Ahmedabad</option><option>Jaipur</option><option>Kolkata</option><option>Chandigarh</option><option>Kochi</option><option>Lucknow</option></select></div></div>
+        <div class="search-divider"></div>
+        <div class="search-field"><label for="budget">MONTHLY BUDGET</label><div class="field-control"><span class="field-icon">₹</span><select id="budget"><option value="any">Any budget</option><option value="10000">Up to ₹10,000</option><option value="20000">Up to ₹20,000</option><option value="35000">Up to ₹35,000</option><option value="50000">Up to ₹50,000</option></select></div></div>
+        <div class="search-divider"></div>
+        <div class="search-field"><label for="bhk">HOME TYPE</label><div class="field-control"><span class="field-icon">▦</span><select id="bhk"><option value="any">Any BHK</option><option value="1">1 BHK</option><option value="2">2 BHK</option><option value="3">3 BHK</option></select></div></div>
+        <div class="search-divider"></div>
+        <div class="search-field"><label for="propertyType">PROPERTY TYPE</label><div class="field-control"><span class="field-icon">▣</span><select id="propertyType"><option value="any">Any type</option><option>Apartment</option><option>Villa</option><option>Independent House</option><option>Studio</option><option>Builder Floor</option><option>PG / Room</option></select></div></div>
+        <button class="search-button" id="searchButton"><span>⌕</span> Find homes</button>
+      </div>
+    </section>
+
+    <section class="listings-section" id="homes">
+      <div class="section-heading">
+        <div><p class="eyebrow">A FEW PLACES TO FALL FOR</p><h2>Homes worth <em>coming home to.</em></h2><p class="section-subtitle">Explore hand-picked spaces for every kind of next step.</p></div>
+        <a href="#homes" class="text-link" id="viewAll">View all homes <span>↗</span></a>
+      </div>
+      <div class="listing-toolbar"><p id="resultCount">Showing 6 sample homes</p><div class="quick-filters"><button class="filter-chip selected" data-type="all">All homes</button><button class="filter-chip" data-type="furnished">Furnished</button><button class="filter-chip" data-type="unfurnished">Unfurnished</button></div></div>
+      <div class="property-grid" id="propertyGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div>⌂</div><h3>No homes match just yet</h3><p>Try another city or widen your budget.</p><button class="outline-button" id="resetFilters">Clear filters</button></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-intro"><p class="eyebrow">A BETTER WAY TO FIND HOME</p><h2>Less searching.<br><em>More settling in.</em></h2><p>Finding a rental should feel exciting, not exhausting. We keep the first steps simple.</p></div>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Find your fit</h3><p>Explore homes by city, monthly budget and the space you need.</p></article>
+        <article class="step"><span class="step-number">02</span><div class="step-icon">♡</div><h3>Save your favourites</h3><p>Tap the heart on a listing to keep a shortlist in this browser.</p></article>
+        <article class="step"><span class="step-number">03</span><div class="step-icon">↗</div><h3>Take the next step</h3><p>Review the details and contact the property owner or agent.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div><p class="eyebrow">HAVE A PLACE TO SHARE?</p><h2>Good homes deserve<br><em>good people.</em></h2><p>Have a flat available for rent? Help someone find their next home.</p></div>
+      <a class="cta-button" href="mailto:hello@example.com?subject=List%20my%20rental%20property">List a property <span>↗</span></a>
+      <div class="cta-decoration">⌂</div>
+    </section>
+  </main>
+
+  <footer id="about"><a class="brand footer-brand" href="#"><span class="brand-mark">⌂</span><span>rente<span class="brand-accent">ase</span></span></a><p>A little closer to feeling at home.</p><div class="footer-links"><a href="#homes">Find a home</a><a href="#how-it-works">How it works</a><a href="mailto:hello@example.com">Contact</a></div><small>© <span id="year"></span> Rentease. Demo template — sample listings are illustrative.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
