@@ -1,4 +1,4 @@
-// Rentease demo data. Replace these sample listings with real, verified properties.
+// डेरा demo data. Replace these sample listings with real, verified properties.
 const properties = [
   {id:1,title:"Sunlit 2 BHK apartment",city:"Pune",area:"Baner, Pune",rent:25000,bhk:2,baths:2,size:"980 sq ft",category:"Apartment",ownerName:"Amit Sharma",phone:"+91 98765 43210",whatsapp:"919876543210",email:"amit.sharma@example.com",furnishing:"Furnished",tag:"Popular choice",description:"Balcony · Gated society",image:"https://images.pexels.com/photos/36195702/pexels-photo-36195702.jpeg?auto=compress&cs=tinysrgb&w=900"},
   {id:2,title:"Quiet studio near the park",city:"Bengaluru",area:"Koramangala, Bengaluru",rent:16000,bhk:1,baths:1,size:"480 sq ft",category:"Studio",ownerName:"Rhea Iyer",phone:"+91 99887 66554",whatsapp:"919988766554",email:"rhea.iyer@example.com",furnishing:"Furnished",tag:"Move-in ready",description:"Natural light · Near metro",image:"https://images.pexels.com/photos/3797991/pexels-photo-3797991.jpeg?auto=compress&cs=tinysrgb&w=900"},
@@ -27,7 +27,7 @@ const resultCount = document.getElementById("resultCount");
 const emptyState = document.getElementById("emptyState");
 let furnishingFilter = "all";
 let visibleProperties = [...properties];
-let saved = new Set(JSON.parse(localStorage.getItem("rentease-saved") || "[]"));
+let saved = new Set(JSON.parse(localStorage.getItem("dera-saved") || "[]"));
 const himachalCities = new Set(["Shimla", "Dharamshala", "Solan", "Manali", "Mandi"]);
 
 const money = n => "₹" + n.toLocaleString("en-IN");
@@ -87,7 +87,7 @@ grid.addEventListener("click", event => {
   if (saveButton) {
     const id = Number(saveButton.dataset.save);
     saved.has(id) ? saved.delete(id) : saved.add(id);
-    localStorage.setItem("rentease-saved", JSON.stringify([...saved]));
+    localStorage.setItem("dera-saved", JSON.stringify([...saved]));
     render();
   }
   if (detailButton) {
@@ -265,7 +265,7 @@ document.getElementById("chatSuggestions").addEventListener("click", event => {
 document.getElementById("feedbackForm").addEventListener("submit", event => {
   event.preventDefault();
   const formData = new FormData(event.currentTarget);
-  const subject = `Rentease ${formData.get("type")} (${formData.get("rating")}/5)`;
+  const subject = `डेरा ${formData.get("type")} (${formData.get("rating")}/5)`;
   const body = [
     `Feedback type: ${formData.get("type")}`,
     `Rating: ${formData.get("rating")}/5`,
